@@ -12,7 +12,7 @@ export default function OrderPizza() {
   const [pizzaDough, setPizzaDough] = useState("");
   const [orderNote, setOrderNote] = useState("");
 
-  const [checked, setChecked] = useState({
+  const [extras, setExtras] = useState({
     pepperoni: false,
     sosis: false,
     jambon: false,
@@ -29,12 +29,12 @@ export default function OrderPizza() {
   });
 
   const extraPrice =
-    Object.keys(checked).filter((key) => checked[key] === true).length * 5;
+    Object.keys(extras).filter((key) => extras[key] === true).length * 5;
 
   const unitPrice = 85;
 
   const handleExtraChange = (event) => {
-    setChecked((prevState) => ({
+    setExtras((prevState) => ({
       ...prevState,
       [event.target.id]: event.target.checked,
     }));
@@ -58,7 +58,7 @@ export default function OrderPizza() {
         isim: inputValue,
         boyut: pizzaSize,
         hamur: pizzaDough,
-        malzemeler: Object.keys(checked).filter((key) => checked[key] === true),
+        malzemeler: Object.keys(extras).filter((key) => extras[key] === true),
         ozel: orderNote,
       },
     }).then((response) => {
@@ -158,7 +158,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.pepperoni}
+              checked={extras.pepperoni}
               name="extra"
               id="pepperoni"
             />
@@ -168,7 +168,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.sosis}
+              checked={extras.sosis}
               name="extra"
               id="sosis"
             />
@@ -178,7 +178,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.jambon}
+              checked={extras.jambon}
               name="extra"
               id="jambon"
             />
@@ -188,7 +188,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.tavuk}
+              checked={extras.tavuk}
               name="extra"
               id="tavuk"
             />
@@ -198,7 +198,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.sogan}
+              checked={extras.sogan}
               name="extra"
               id="sogan"
             />
@@ -208,7 +208,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.domates}
+              checked={extras.domates}
               name="extra"
               id="domates"
             />
@@ -218,7 +218,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.misir}
+              checked={extras.misir}
               name="extra"
               id="misir"
             />
@@ -228,7 +228,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.sucuk}
+              checked={extras.sucuk}
               name="extra"
               id="sucuk"
             />
@@ -238,7 +238,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.jalepeno}
+              checked={extras.jalepeno}
               name="extra"
               id="jalepeno"
             />
@@ -248,7 +248,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.sarimsak}
+              checked={extras.sarimsak}
               name="extra"
               id="sarimsak"
             />
@@ -258,7 +258,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.biber}
+              checked={extras.biber}
               name="extra"
               id="biber"
             />
@@ -268,7 +268,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.ananas}
+              checked={extras.ananas}
               name="extra"
               id="ananas"
             />
@@ -278,7 +278,7 @@ export default function OrderPizza() {
             <input
               type="checkbox"
               onChange={handleExtraChange}
-              checked={checked.kabak}
+              checked={extras.kabak}
               name="extra"
               id="kabak"
             />
