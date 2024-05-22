@@ -1,0 +1,18 @@
+.home-page {
+  width: 100vw;
+  background-color: #ce2829;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page-title {
+  font-family: "Barlow", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+.home-banner {
+  width: 100%;
+}

@@ -1,0 +1,12 @@
+.success-page {
+  height: 80.5vh;
+  background-color: #ce2829;
+  font-size: 32px;
+  color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
