@@ -34,8 +34,8 @@ export default function OrderPizza() {
   const unitPrice = 85;
 
   const handleExtraChange = (event) => {
-    setExtras((prevState) => ({
-      ...prevState,
+    setExtras((extras_) => ({
+      ...extras_,
       [event.target.id]: event.target.checked,
     }));
   };
