@@ -17,6 +17,7 @@ export default function Home() {
         text="Acıktım"
         style={{
           borderRadius: "90px",
+          cursor: "pointer",
         }}
         onClick={() => {
           history.push("/order-pizza");

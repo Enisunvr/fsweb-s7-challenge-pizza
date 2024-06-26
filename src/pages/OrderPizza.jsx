@@ -76,7 +76,7 @@ export default function OrderPizza() {
       <form onSubmit={handleFormSubmit}>
         <h1>Position Absolute Acı Pizza</h1>
         <div className="order-pizza-top">
-          <span className="price">86,00 TL</span>
+          <span className="price">85,50₺</span>
           <span className="rating">4.9</span>
           <span className="rate-count">(200)</span>
         </div>
@@ -126,6 +126,8 @@ export default function OrderPizza() {
             </div>
           </div>
 
+          {/* HAMUR SEÇ */}
+
           <div className="hamur-select">
             <h3>
               Hamur Seç <span style={{ color: "red" }}>*</span>
@@ -135,7 +137,9 @@ export default function OrderPizza() {
               onChange={handleDoughChange}
               value={pizzaDough}
             >
-              <option>Hamur Kalınlığı</option>
+              <option value="" disabled selected hidden>
+                Hamur Kalınlığı
+              </option>
               <option value="ince">İnce</option>
               <option value="orta">Orta</option>
               <option value="kalin">Kalın</option>
@@ -148,7 +152,7 @@ export default function OrderPizza() {
             Ek Malzemeler <span style={{ color: "red" }}>*</span>
           </h3>
 
-          <p>En fazla 10 malzeme seçebilirsiniz. 5t</p>
+          <p>En fazla 10 malzeme seçebilirsiniz. 5₺</p>
         </div>
 
         {/* CHECKBOX ALANI */}
@@ -291,7 +295,11 @@ export default function OrderPizza() {
         <p style={{ fontWeight: "bold", fontSize: "18px" }}>Sipariş Notu</p>
 
         <input
-          style={{ marginBottom: "10px", padding: "5px 20px" }}
+          style={{
+            width: "200px",
+            marginBottom: "10px",
+            padding: "5px 20px ",
+          }}
           type="text"
           value={inputValue}
           onChange={handleInputChange}
